@@ -1,14 +1,30 @@
 ---
-
-layout: calendar  # required
-title: My Calendar
-
-calendar_timezone_offset: -0800   # required
-calendar_csv: example/events.csv  # required. Path to CSV file from base url
-
-calendar_focus_date: 2016-01-06   # optional. YYYY-MM-DD. Without it, the default is today
-calendar_caption: My calendar caption   # optional
-
+layout: page
+title: 
+permalink: /calendar/
+author_profile: true
 ---
+TEST
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/scripts/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css">
+<link rel="stylesheet" media="print" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.print.css">
 
-Your usual content here
+<script>
+$(document).ready(function() {
+  $('#calendar').fullCalendar({
+		events:'/calendar-data'
+	})
+
+});
+
+</script>
+
+<!--
+{% for event in site.events %}
+{{event.title}} {{event.event_date}}<br/>
+{% endfor %}
+-->
+<div id="calendar"></div>
