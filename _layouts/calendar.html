@@ -1,7 +1,7 @@
 ---
-layout: single
-calendar_css: <link rel="stylesheet" href="!PATH_TO_COMPONENTS!/bootstrap-calendar/css/calendar.css">
-calendar_bootstrap_css: <link rel="stylesheet" href="!PATH_TO_COMPONENTS!/bootstrap/css/bootstrap.css">
+layout: default
+calendar_css: <link rel="stylesheet" href="/components/bootstrap-calendar/css/calendar.css">
+calendar_bootstrap_css: <link rel="stylesheet" href="/components/bootstrap/css/bootstrap.css">
 ---
 {% assign PATH_TO_COMPONENTS =  "/components" | prepend: site.baseurl %}
 
@@ -37,12 +37,12 @@ calendar_bootstrap_css: <link rel="stylesheet" href="!PATH_TO_COMPONENTS!/bootst
 
 </div>
 
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/lodash/lodash.min.js"></script>
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/bootstrap-calendar/js/calendar.js"></script>
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/moment/min/moment.min.js"></script>
-<script type="text/javascript" src="{{PATH_TO_COMPONENTS}}/papaparse/papaparse.min.js"></script>
+<script type="text/javascript" src="/components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/components/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="/components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/components/bootstrap-calendar/js/calendar.js"></script>
+<script type="text/javascript" src="/components/moment/min/moment.min.js"></script>
+<script type="text/javascript" src="/components/papaparse/papaparse.min.js"></script>
 
 <script type="text/javascript">
 (function($) {
@@ -95,7 +95,7 @@ calendar_bootstrap_css: <link rel="stylesheet" href="!PATH_TO_COMPONENTS!/bootst
   // Load the calendar with the provided events in correct format
   function loadCalendar(calendarEvents) {
     var options = {
-      tmpl_path: "{{PATH_TO_COMPONENTS}}/bootstrap-calendar/tmpls/",
+      tmpl_path: "/components/bootstrap-calendar/tmpls/",
       events_source: calendarEvents,
       view: 'month',
       tmpl_cache: false,
